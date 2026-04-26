@@ -8,9 +8,9 @@ import utils.DriverFactory;
 public class GoogleTest {
 
     @BeforeMethod
-    public void setup() {
-        DriverFactory.initDriver("chrome");
-    }
+public void setup() {
+    DriverFactory.initDriver();
+}
 
     @Test
     public void testGoogle() {
