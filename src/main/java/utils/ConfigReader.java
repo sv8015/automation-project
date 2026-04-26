@@ -10,7 +10,9 @@ public class ConfigReader {
     static {
         try {
             prop = new Properties();
-            FileInputStream fis = new FileInputStream("src/test/resources/config.properties");
+            InputStream is = ConfigReader.class
+        .getClassLoader()
+        .getResourceAsStream("config.properties");
             prop.load(fis);
         } catch (Exception e) {
             throw new RuntimeException("Failed to load config file");
