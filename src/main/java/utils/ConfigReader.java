@@ -1,5 +1,6 @@
 package utils;
 
+import java.io.InputStream;
 import java.io.FileInputStream;
 import java.util.Properties;
 
@@ -13,7 +14,7 @@ public class ConfigReader {
             InputStream is = ConfigReader.class
         .getClassLoader()
         .getResourceAsStream("config.properties");
-            prop.load(fis);
+            prop.load(is);
         } catch (Exception e) {
             throw new RuntimeException("Failed to load config file");
         }
