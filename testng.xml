@@ -1,0 +1,7 @@
+<suite name="Suite" parallel="tests" thread-count="2">
+    <test name="ChromeTests">
+        <classes>
+            <class name="tests.GoogleTest"/>
+        </classes>
+    </test>
+</suite>
