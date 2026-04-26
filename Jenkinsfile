@@ -4,9 +4,10 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: 'github-creds',
-                    url: 'https://github.com/sv8015/automation-project.git'
-            }
+        git branch: 'main',
+            credentialsId: 'github-creds',
+            url: 'https://github.com/sv8015/automation-project.git'
+    }
         }
 
         stage('Build') {
